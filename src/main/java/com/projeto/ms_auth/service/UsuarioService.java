@@ -33,7 +33,7 @@ public class UsuarioService {
 
         Usuario usuario = new Usuario();
         usuario.setEmail(usuarioRegisterDTO.login());
-        String passwordHash = passwordEncoder.encode(usuarioRegisterDTO.login());
+        String passwordHash = passwordEncoder.encode(usuarioRegisterDTO.senha());
         usuario.setSenha(passwordHash);
         usuario.setRole(Role.ROLE_PROFESSOR);
 
